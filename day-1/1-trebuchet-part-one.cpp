@@ -13,18 +13,18 @@ int main() {
     }
 
     long long total = 0;
-    for(int i=0;i<arr.size();i++) {
+    for(auto & i : arr) {
         int num1 = INT_MIN;
         int num2 = INT_MIN;
-        for(int j=0;j<arr[i].size();j++) {
-            if((int)arr[i][j]>=48 && (int)arr[i][j]<=57) {
-                num1=arr[i][j]-'0';
+        for(int j=0;j<i.size();j++) {
+            if((int)i[j]>=48 && (int)i[j]<=57) {
+                num1=i[j]-'0';
                 break;
             }
         }
-        for(int j=arr[i].size()-1;j>=0;j--) {
-            if((int)arr[i][j]>=48 && (int)arr[i][j]<=57) {
-                num2=arr[i][j]-'0';
+        for(int j=i.size()-1;j>=0;j--) {
+            if((int)i[j]>=48 && (int)i[j]<=57) {
+                num2=i[j]-'0';
                 break;
             }
         }

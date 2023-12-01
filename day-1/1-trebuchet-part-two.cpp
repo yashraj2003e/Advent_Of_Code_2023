@@ -1,16 +1,16 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-static bool cmp(pair<string,int> a,pair<string,int> b) {
-    return a.second < b.second;
-}
+/*
+ * The solution can be optimized, but it took me a lot of time, im not updating it.
+ */
 
 int main() {
     freopen("output.txt","w",stdout);
     ifstream inputFile("input.txt");
 
     unordered_map<string,int> myMap = {{"one",1},{"two",2},{"three",3},{"four",4},{"five",5},{"six",6},{"seven",7},{"eight",8},{"nine",9}};
-
+    vector<string> wordVec = {"one","two","three","four","five","six","seven","eight","nine"};
     vector<string> arr;
 
     string line;
@@ -19,49 +19,91 @@ int main() {
     }
 
     long long total = 0;
+    vector<pair<string,int>> outputVec;
+
     for(int i=0;i<arr.size();i++) {
-        vector<pair<string,int>> outputVec;
-        string currentStr = arr[i];
+        int first = INT_MIN;
+        int firstInd = 0;
+        int secondInd = 0;
+        int second = INT_MIN;
+        string word = arr[i];
 
-        for(auto& it:myMap) {
-            string val = it.first;
-            auto it1 = currentStr.find(val);
-            if(it1!=string::npos) {
-                outputVec.emplace_back(val,it1);
-//                break;
+        for(int x=0;x<word.size();x++) {
+            string threeWords = word.substr(x,3);
+            string fourWords = word.substr(x,4);
+            string fiveWords = word.substr(x,5);
+
+            auto it = find(wordVec.begin(),wordVec.end(),threeWords);
+            auto it1 = find(wordVec.begin(),wordVec.end(),fourWords);
+            auto it2 = find(wordVec.begin(),wordVec.end(),fiveWords);
+
+            if(it!=wordVec.end()) {
+                if(first==INT_MIN) {
+                    first = myMap[threeWords];
+                    second = first;
+                    firstInd = x;
+                    secondInd = firstInd;
+                }
+                else {
+                    if(x > secondInd) {
+                        secondInd = x;
+                        second = myMap[threeWords];
+                    }
+                }
+            }
+
+            if(it1!=wordVec.end()) {
+                if(first==INT_MIN) {
+                    first = myMap[fourWords];
+                    firstInd = x;
+                    second = first;
+                    secondInd = firstInd;
+                }
+                else {
+                    if(x > secondInd) {
+                        secondInd = x;
+                        second = myMap[fourWords];
+                    }
+                }
+            }
+
+            if(it2!=wordVec.end()) {
+                if(first==INT_MIN) {
+                    first = myMap[fiveWords];
+                    firstInd = x;
+                    second = first;
+                    secondInd = firstInd;
+                }
+                else {
+                    if(x > secondInd) {
+                        secondInd = x;
+                        second = myMap[fiveWords];
+                    }
+                }
             }
         }
 
-        int num1 = INT_MIN;
-        int num2 = INT_MIN;
-
-        for(int j=0;j<arr[i].size();j++) {
-            if((int)arr[i][j]>=48 && (int)arr[i][j]<=57) {
-                num1=arr[i][j]-'0';
-                outputVec.emplace_back(to_string(num1),j);
-                break;
+        for(int ind = 0;ind<word.size();ind++) {
+            if((int)word[ind]>=48 && (int)word[ind]<=57) {
+                if(first==INT_MIN) {
+                    first = word[ind]-'0';
+                    second = word[ind]-'0';
+                }
+                else {
+                    if(ind<firstInd) {
+                        firstInd = ind;
+                        first = word[ind]-'0';
+                    }
+                    else {
+                        if(ind>secondInd) {
+                            second = word[ind]-'0';
+                            secondInd = ind;
+                        }
+                    }
+                }
             }
         }
-
-        for(int j=arr[i].size()-1;j>=0;j--) {
-            if((int)arr[i][j]>=48 && (int)arr[i][j]<=57) {
-                num2=arr[i][j]-'0';
-                outputVec.emplace_back(to_string(num2),j);
-                break;
-            }
-        }
-
-        sort(outputVec.begin(),outputVec.end(),cmp);
-//        for(auto it:outputVec) {
-//            cout<<it.first<<" "<<it.second<<endl;
-//        }
-        int first = outputVec[0].first.size()==1 ? stoi(outputVec[0].first) : myMap[outputVec[0].first];
-        int second = outputVec.back().first.size()==1 ? stoi(outputVec.back().first) : myMap[outputVec.back().first];
-        first*=10;
-        total += first;
-        total+=second;
-        cout<<first+second<<endl;
+        total+=(first*10 + second);
     }
-
     cout<<total<<endl;
 }
