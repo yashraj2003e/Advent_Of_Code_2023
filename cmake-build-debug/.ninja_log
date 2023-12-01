@@ -1,0 +1,17 @@
+# ninja log v5
+1	1075	7231392041885470	CMakeFiles/Advent_of_code.dir/main.cpp.obj	c2c6bd3425e002ba
+0	4091	7231392299019467	CMakeFiles/Advent_of_code.dir/day-1/1-trebuchet-part-one.cpp.obj	f76827f9ffd3d494
+4094	4302	7231392301076717	Advent_of_code.exe	26f3f434c0274a17
+1	317	7231392714681827	build.ninja	be18197fc531ead6
+10	3768	7231393722325180	CMakeFiles/Advent_of_code.dir/day-1/1-trebuchet-part-one.cpp.obj	f76827f9ffd3d494
+3768	3952	7231393724137078	Advent_of_code.exe	26f3f434c0274a17
+6	3689	7231394253065146	CMakeFiles/Advent_of_code.dir/day-1/1-trebuchet-part-one.cpp.obj	f76827f9ffd3d494
+3690	3870	7231394254847413	Advent_of_code.exe	26f3f434c0274a17
+12	3635	7231394604087142	CMakeFiles/Advent_of_code.dir/day-1/1-trebuchet-part-one.cpp.obj	f76827f9ffd3d494
+3636	3821	7231394605907640	Advent_of_code.exe	26f3f434c0274a17
+8	3870	7231394771172431	CMakeFiles/Advent_of_code.dir/day-1/1-trebuchet-part-one.cpp.obj	f76827f9ffd3d494
+3870	4051	7231394772964064	Advent_of_code.exe	26f3f434c0274a17
+10	3779	7231395064076276	CMakeFiles/Advent_of_code.dir/day-1/1-trebuchet-part-one.cpp.obj	f76827f9ffd3d494
+3780	3966	7231395065874364	Advent_of_code.exe	26f3f434c0274a17
+10	3830	7231395341607782	CMakeFiles/Advent_of_code.dir/day-1/1-trebuchet-part-one.cpp.obj	f76827f9ffd3d494
+3831	4022	7231395343446050	Advent_of_code.exe	26f3f434c0274a17
