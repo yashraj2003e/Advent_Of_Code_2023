@@ -1,10 +1,20 @@
 # ninja log v5
 0	2470	7231564961755556	CMakeFiles/Advent_of_code.dir/day-1/1-trebuchet-part-one.cpp.obj	f76827f9ffd3d494
 1	1075	7231392041885470	CMakeFiles/Advent_of_code.dir/main.cpp.obj	c2c6bd3425e002ba
-3786	3970	7232077514151068	Advent_of_code.exe	eabadea84b9af0bb
-46	899	7232078220343976	build.ninja	be18197fc531ead6
+3505	3677	7232078258418907	Advent_of_code.exe	2661c7f79b1a9db1
+0	3504	7232078256750100	CMakeFiles/Advent_of_code.dir/day-2/2-cube-conundrum-part-two.cpp.obj	aef826e6f2d780df
+1	355	7232977146161573	build.ninja	be18197fc531ead6
 4	2240	7231587183441448	CMakeFiles/Advent_of_code.dir/day-1/1-trebuchet-part-two.cpp.obj	6976e7704c2172fd
 9	3785	7232077512381270	CMakeFiles/Advent_of_code.dir/day-2/2-cube-conundrum-part-one.cpp.obj	56925c3498f6c3e0
-1	355	7232078220343976	build.ninja	be18197fc531ead6
-0	3504	7232078256750100	CMakeFiles/Advent_of_code.dir/day-2/2-cube-conundrum-part-two.cpp.obj	aef826e6f2d780df
-3505	3677	7232078258418907	Advent_of_code.exe	2661c7f79b1a9db1
+1	4096	7232977340776228	CMakeFiles/Advent_of_code.dir/day-3/3-gear-ratios-part-one.cpp.obj	9e8bd2cd7785d126
+4102	4542	7232977345150930	Advent_of_code.exe	cef33b7723d736a
+8	3836	7232978654914270	CMakeFiles/Advent_of_code.dir/day-3/3-gear-ratios-part-one.cpp.obj	9e8bd2cd7785d126
+3836	4248	7232978658976390	Advent_of_code.exe	cef33b7723d736a
+9	4248	7232980378647505	CMakeFiles/Advent_of_code.dir/day-3/3-gear-ratios-part-one.cpp.obj	9e8bd2cd7785d126
+4248	4444	7232980380569869	Advent_of_code.exe	cef33b7723d736a
+8	6465	7232983920674451	CMakeFiles/Advent_of_code.dir/day-3/3-gear-ratios-part-one.cpp.obj	9e8bd2cd7785d126
+6466	6911	7232983925050619	Advent_of_code.exe	cef33b7723d736a
+10	3987	7232984086247251	CMakeFiles/Advent_of_code.dir/day-3/3-gear-ratios-part-one.cpp.obj	9e8bd2cd7785d126
+3988	4165	7232984087993739	Advent_of_code.exe	cef33b7723d736a
+11	3990	7233051484808453	CMakeFiles/Advent_of_code.dir/day-3/3-gear-ratios-part-one.cpp.obj	9e8bd2cd7785d126
+3991	4207	7233051486962037	Advent_of_code.exe	cef33b7723d736a

@@ -4,4 +4,5 @@ project(Advent_of_code)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(Advent_of_code
-        day-2/2-cube-conundrum-part-two.cpp)
+        day-3/3-gear-ratios-part-one.cpp
+        day-3/3-gear-ratios-part-one.cpp)
