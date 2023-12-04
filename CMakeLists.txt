@@ -4,5 +4,5 @@ project(Advent_of_code)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(Advent_of_code
-        day-4/4-scratchcards-part-one.cpp
+        day-4/4-scratchcards-part-two.cpp
 )
