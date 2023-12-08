@@ -4,5 +4,4 @@ project(Advent_of_code)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(Advent_of_code
-        day-5/5-fertilizer.py
-)
+        day-8/8-Haunted-Wasteland-second.cpp)
