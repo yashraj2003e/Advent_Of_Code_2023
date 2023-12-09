@@ -14,6 +14,7 @@ int main() {
         while (iss >> number) {
             val.push_back(number);
         }
+        reverse(val.begin(),val.end());
         vector<vector<long long>> totalArr;
         totalArr.push_back(val);
         while (true) {
